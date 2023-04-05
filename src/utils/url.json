@@ -1,0 +1,102 @@
+{
+  "clima" : {
+    "precipitacao" : {
+      "mm_automaticas" : "http://www.inmet.gov.br/portal/index.php?r=estacoes/estacoesAutomaticas",
+      "mm_convencionais" : "http://www.inmet.gov.br/portal/index.php?r=estacoes/estacoesConvencionais",
+      "mm_normal" : "http://www.inmet.gov.br/portal/index.php?r=bdmep/bdmep"
+  
+    },
+    "temperatura" : {
+     "tmp_celsius" : "https://power.larc.nasa.gov/",
+      "tmp_convecionais" : "http://www.inmet.gov.br/portal/index.php?r=estacoes/estacoesConvencionais",
+      "tmp_automaticas" : "http://www.inmet.gov.br/portal/index.php?r=estacoes/estacoesAutomaticas"
+    },
+    "umidade_relativa_do_ar" : {
+      "umd_relativa" : "https://power.larc.nasa.gov/",
+      "umd_relativa_bdmep" : "http://www.inmet.gov.br/portal/index.php?r=bdmep/bdmep",
+      "umd_relativa_bdmep_automaticas" : "http://www.inmet.gov.br/portal/index.php?r=estacoes/estacoesAutomaticas",
+      "umd_relativa_bdmep_convecionais" : "http://www.inmet.gov.br/portal/index.php?r=estacoes/estacoesConvencionais"
+    },
+    "vento": {
+      "velocidade_vento" : "https://power.larc.nasa.gov/",
+      "velocidade_vento_automaticas" : "http://www.inmet.gov.br/portal/index.php?r=estacoes/estacoesAutomaticas",
+      "velocidade_vento_convencionais" : "http://www.inmet.gov.br/portal/index.php?r=estacoes/estacoesConvencionais"
+    }
+  },
+  "producao_vegetal": {
+
+  },
+  "producao_animal":{
+    "asininos" : {
+      "rebanho" : " https://sidra.ibge.gov.br/tabela/73"
+    },
+    "aves_de_cortes" : {
+      "qtd_abatidos" : "http://www.fao.org/faostat/en/#data/QL",
+      "numero_de_aniamis" : "https://apps.fas.usda.gov/psdonline/app/index.html#/app/advQuery",
+      "preco_frango_congelado" : "https://www.cepea.esalq.usp.br/br/indicador/frango.aspx",
+      "efetivos_dos_rebanhos" : "https://bi.sede.embrapa.br/BOE/BI/custom.jsp?i=31799029&u=boetrusted"
+    },
+    "aves_poedeiras" : {
+      "qtd_de_ovos" : "http://www.fao.org/faostat/en/#data/QL",
+      "efetivo_dos_rebanhos" : "https://bi.sede.embrapa.br/BOE/BI/custom.jsp?i=31799029&u=boetrusted",
+      "preco_dos_ovos_cepea" : "https://www.cepea.esalq.usp.br/br/indicador/ovos.aspx",
+      "n_de_cabecas_de_galinhas_estabelecimentos" : "https://sidra.ibge.gov.br/tabela/915"
+
+    },
+    "bovinos_de_corte" : {
+      "qtd_abatidos" : "http://www.fao.org/faostat/en/#data/QL",
+      "n_de_animais" : "https://apps.fas.usda.gov/psdonline/app/index.html#/app/advQuery",
+      "efetivo_do_rebanho" : "https://bi.sede.embrapa.br/BOE/BI/custom.jsp?i=31799029&u=boetrusted",
+      "indicador_boi_gordo" : "https://www.cepea.esalq.usp.br/br/indicador/boi-gordo.aspx",
+      "evolucao_de_inseminacao" : "http://www.zebu.org.br/Home/Conteudo/13384-Dados-de-Comercializacao-de-Semen-(1981_2011)",
+      "pecuaria_br_prod_e_pasto" : "https://issuu.com/revista_abcz/docs/documento_abcz_pecuariabrasileira"
+    },
+    "bocinos_de_leite" : {
+      "estoque_publico" : "https://www.conab.gov.br/estoques/estoques-por-produto?limitstart=0",
+      "qtd_prod_de_leite" :"http://www.fao.org/faostat/en/#data/QL"
+    },
+    "bubalinos" : {
+      "producao" :"http://www.fao.org/faostat/en/#data/QL",
+      "efetivo_do_rebanho" : "https://bi.sede.embrapa.br/BOE/BI/custom.jsp?i=31799029&u=boetrusted"
+    },
+    "caprinos" : {
+      "producao" :"http://www.fao.org/faostat/en/#data/QL",
+      "efetivo_do_rebanho" : "https://bi.sede.embrapa.br/BOE/BI/custom.jsp?i=31799029&u=boetrusted"
+    },
+    "codornas" : {
+      "efetivo_do_rebanho" : "https://sidra.ibge.gov.br/tabela/3939",
+      "efetivo_do_rebanho_2" : "https://bi.sede.embrapa.br/BOE/BI/custom.jsp?i=31799029&u=boetrusted"
+    },
+    "coelhos" : {
+      "producao" :"http://www.fao.org/faostat/en/#data/QL"
+    },
+    "equenos" : {
+      "efetivo_do_rebanho" : "https://sidra.ibge.gov.br/tabela/3939"
+    },
+    "muares" : {
+      "rebanho" : "https://sidra.ibge.gov.br/tabela/73"
+    },
+    "ovinos" : {
+      "rebanho" : "http://www.fao.org/faostat/en/#data/QL",
+      "efetivo_do_rebanho" : "https://sidra.ibge.gov.br/tabela/3939"
+    },
+    "patos" : {
+
+    },
+    "peixes" : {
+      "indicador_aquicultura" : "http://dados.gov.br/dataset/aquicultura-familiar/resource/cbd3ac60-896c-4316-bc51-9a94764546a8",
+      "producao_valor" : "https://sidra.ibge.gov.br/tabela/3940"
+    },
+    "perus" : {
+
+    },
+    "suinos" :{
+      "qtd_abatidos" : "http://www.fao.org/faostat/en/#data/QL"
+    }
+  },
+  "outros" : {
+
+  }
+}
+
+
