@@ -2,7 +2,7 @@ import sqlite3
 import datetime
 
 
-def insert_into(comunidade, idade, data , sexo, qtd):
+def vac(comunidade, idade, data , sexo, qtd):
     
     conn = sqlite3.connect(".\\src\\database\\db.sqlite3")
     
@@ -11,6 +11,22 @@ def insert_into(comunidade, idade, data , sexo, qtd):
 
     query.execute(
         f"INSERT INTO vac(comunidade, idade, data, sexo, qtd) values('{comunidade}' ,'{idade}' ,'{data}' , '{sexo}', '{qtd}')"
+    )
+    
+    conn.commit()
+    
+    conn.close()
+    
+
+def queimadas(data, satelite, pais, estado, municipio, bioma, diassemchuva, precipitacao, riscofogo, latitude, longitude, frp):
+    
+    conn = sqlite3.connect(".\\src\\database\\db.sqlite3")
+    
+    query = conn.cursor()
+    
+
+    query.execute(
+        f"INSERT INTO queimadas(data, satelite, pais, estado, municipio, bioma, diassemchuva, precipitacao, riscofogo, latitude, longitude, frp) values('{data}' ,'{satelite}' ,'{pais}' , '{estado}', '{municipio}', '{bioma}', '{diassemchuva}', '{precipitacao}', '{riscofogo}', '{latitude}', '{longitude}', '{frp}')"
     )
     
     conn.commit()
