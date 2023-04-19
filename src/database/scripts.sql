@@ -15,7 +15,26 @@ CREATE TABLE queimadas (
 	diassemchuva INT,
 	precipitacao FLOAT,
 	riscofogo INT,
-	latitude FLOAT,
-	longitude FLOAT,
+	latitude VARCHAR(30),
+	longitude VARCHAR(30),
 	frp INT
+),
+CREATE TABLE pecuaria (
+	animal VARCHAR(55),
+	ano INT,
+	municipio VARCHAR(55),
+	qtd INT
+),
+CREATE TABLE umidade_ar (
+	data DATE,
+	dias_precipitacao_fluvial INT,
+	t_max FLOAT,
+	t_min FLOAT,
+	umi_relativa_p FLOAT,
+	velo_vento_m_s FLOAT,
+	velo_vento_media_mes_m_s FLOAT,
+	latitude VARCHAR(30),
+	longitude VARCHAR(30),
+	municipio VARCHAR(55)
+
 )

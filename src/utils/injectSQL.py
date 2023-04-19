@@ -26,7 +26,7 @@ def queimadas(data, satelite, pais, estado, municipio, bioma, diassemchuva, prec
     
 
     query.execute(
-        f"INSERT INTO queimadas(data, satelite, pais, estado, municipio, bioma, diassemchuva, precipitacao, riscofogo, latitude, longitude, frp) values('{data}' ,'{satelite}' ,'{pais}' , '{estado}', '{municipio}', '{bioma}', '{diassemchuva}', '{precipitacao}', '{riscofogo}', '{latitude}', '{longitude}', '{frp}')"
+        f"INSERT INTO queimadas(data, satelite, pais, estado, municipio, bioma, diassemchuva, precipitacao, riscofogo, latitude, longitude, frp) values('{data}' ,'{satelite}' ,'{pais}' , '{estado}', '{municipio}', '{bioma}', '{diassemchuva}', '{precipitacao}', '{riscofogo}', '{latitude}', '{longitude}', '{municipio}')"
     )
     
     conn.commit()
@@ -42,6 +42,21 @@ def pecuaria(animal, ano, municipio, qtd):
 
     query.execute(
         f"INSERT INTO pecuaria(animal, ano, municipio, qtd) values('{animal}', '{ano}', '{municipio}', '{qtd}')"
+    )
+    
+    conn.commit()
+    
+    conn.close()
+
+def umidade_ar(data, dias_precipitacao_fluvial, t_max, t_min, umi_relativa_p, velo_vento_m_s, velo_vento_media_m_s, latitude, longitude, municipio):
+    
+    conn = sqlite3.connect(".\\src\\database\\db.sqlite3")
+    
+    query = conn.cursor()
+    
+
+    query.execute(
+        f"INSERT INTO umidade_ar(data, dias_precipitacao_fluvial, t_max, t_min, umi_relativa_p, velo_vento_m_s, velo_vento_media_mes_m_s, latitude, longitude, municipio) values('{data}', '{dias_precipitacao_fluvial}', '{t_max}', '{t_min}', '{umi_relativa_p}', '{velo_vento_m_s}', '{velo_vento_media_m_s}', '{latitude}', '{longitude}', '{municipio}')"
     )
     
     conn.commit()

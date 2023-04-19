@@ -88,3 +88,25 @@ import pandas as pd
     
 # # data_complete = pd.DataFrame({"animal" : detalhamento, "ano" : ano, "qtd": qtd , "munucipio" : municipio})
 # # data_complete.to_excel("tmp/data-frame.xlsx")
+
+
+
+#Meteorologia dados Boa Vista
+
+# df = pd.read_excel('src\database\Dados Meteorologico de Boa Vista.xlsx')
+
+
+# for x in range(len(df)):
+#     sql.umidade_ar(
+#         df["Data"][x],
+#         df["DIAS PRECIPTACAO FLUVIAL"][x],
+#         df["TEMPERATURA MAX"][x],
+#         df["TEMPERATURA MIN"][x],
+#         df["UMI. RELATIVA P."][x],
+#         df["V. VENTO M/S"][x],
+#         df["V. VENTO MEDIA MENSAL"][x],
+#         df["LAT"][x],
+#         df["LON"][x],
+#         df["MUNICIPIO"][x]
+#           )
+#     print("success data for range", x)
