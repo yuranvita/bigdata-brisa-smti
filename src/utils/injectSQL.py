@@ -32,6 +32,21 @@ def queimadas(data, satelite, pais, estado, municipio, bioma, diassemchuva, prec
     conn.commit()
     
     conn.close()
+    
+def pecuaria(animal, ano, municipio, qtd):
+    
+    conn = sqlite3.connect(".\\src\\database\\db.sqlite3")
+    
+    query = conn.cursor()
+    
+
+    query.execute(
+        f"INSERT INTO pecuaria(animal, ano, municipio, qtd) values('{animal}', '{ano}', '{municipio}', '{qtd}')"
+    )
+    
+    conn.commit()
+    
+    conn.close()
 
 def my_query(query):
     
