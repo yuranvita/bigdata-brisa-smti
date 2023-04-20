@@ -1,6 +1,6 @@
 CREATE TABLE vac (
 	comunidade VARCHAR(44),
-	idade INT,
+	idade VARCHAR(30),
 	data DATE,
 	sexo CHAR(1),
 	qtd INT

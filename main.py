@@ -4,8 +4,8 @@ import pandas as pd
 
 
 
-## VAC INSERTION SQL SCRIPT 
-#df = pd.read_excel("src\database\VACINAÇÃO COMPLETO.xlsx")
+# # VAC INSERTION SQL SCRIPT 
+# df = pd.read_excel("src\database\VACINAÇÃO COMPLETO.xlsx")
 # for x in range(len(df)):
 #     sql.vac(
 #         comunidade=df["COMUNIDADE"][x], 
@@ -21,45 +21,28 @@ import pandas as pd
 #         df["SEXO"][x])
 
 
-## Queimadas    
-# queimadas_abas = ["Planilha1" , "Planilha2", "Planilha3", "Planilha4", "Planilha5"]
-# for name in queimadas_abas:
-#     df = pd.read_excel("src\database\queimadas_geral.xlsx", sheet_name=name)
-#     print("*"*100)
-#     for x in range(len(df)):
-#         lat = df["latitude"][x]
-#         lon = df["longitude"][x]
-#         lat_str = len(str(lat))
-#         lon_str = len(str(lon))
-#         lat_decimal = lat/10**(lat_str-1)
-#         lon_decimal = lon/10**(lon_str-3)
-#         sql.queimadas(  
-#                 df["datahora"][x], 
-#                 df["satelite"][x],
-#                 df["pais"][x],
-#                 df["estado"][x],
-#                 df["municipio"][x],
-#                 df["bioma"][x],
-#                 df["diasemchuva"][x],
-#                 df["precipitacao"][x],
-#                 df["riscofogo"][x],
-#                 lat_decimal,
-#                 lon_decimal,
-#                 df["frp"][x]
-#                 )
-#         print(df["datahora"][x], 
-#                 df["satelite"][x],
-#                 df["pais"][x],
-#                 df["estado"][x],
-#                 df["municipio"][x],
-#                 df["bioma"][x],
-#                 df["diasemchuva"][x],
-#                 df["precipitacao"][x],
-#                 df["riscofogo"][x],
-#                 lat_decimal,
-#                 lon_decimal,
-#                 df["frp"][x])
+##Queimadas
+list_arr_csv = ["Focos_de_Queimadas_2017-01-01_2017-12-31.csv", "Focos_de_Queimadas_2018-01-01_2018-12-31.csv", "Focos_de_Queimadas_2019-01-01_2019-12-31.csv", "Focos_de_queimadas_2020-01-01_2020-12-31.csv", "Focos_2021-01-01_2021-12-31.csv", "Focos_de_Queimadas_2023.csv"]
 
+for name in list_arr_csv:
+    url = "src\database\\"+name
+    df = pd.read_csv(url, delimiter=",")
+    for x in range(len(df)):
+         sql.queimadas(  
+                df["datahora"][x], 
+                df["satelite"][x],
+                df["pais"][x],
+                df["estado"][x],
+                df["municipio"][x],
+                df["bioma"][x],
+                df["diasemchuva"][x],
+                df["precipitacao"][x],
+                df["riscofogo"][x],
+                str(df["latitude"][x]),
+                str(df["longitude"][x]),
+                df["frp"][x]
+                )
+         print("success", x, "-", df["latitude"][x] , "-" , df["longitude"][x])
 
 ## Pecuaria 
 # pecuaria_sheet = [ "Alto Alegre", "Amajari", "Boa Vista", "Bonfim", "Cantá", "Caracaraí", "Caroebe", "Iracema", "Mucajaí", "Normandia", "Pacaraima", "Rorainópolis", "São João da Baliza", "São Luiz", "Uiramutã" ]
